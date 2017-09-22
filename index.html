@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NAV</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css"/>
+    <link type="text/css" rel="stylesheet" href="css/myCustom.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body>
+    <header>
+        <h2>Navigation Testing</h2>
+    </header>
+    <section ng-app = "navToggleApp" ng-controller="toggleController" id="navToggle">
+        <ul>
+            <li ng-repeat="item in navigationFields" ng-click="toggleNav($index)"><div class="arrow"></div>{{item.fieldname}}
+                <ul class = "overflowHidden transitionHeight" ng-hide="navSelector!=$index">
+                    <li ng-repeat="subcontentItem in item.fieldcontent">{{subcontentItem}}</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
+
+<script>
+var myApp = angular.module("navToggleApp", []);
+
+myApp.controller('toggleController', function($scope) {
+    
+    $scope.navSelector = -1;
+    
+    $scope.navigationFields = [
+        {
+            "fieldname": "Favourites A",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        },
+	
+        {
+            "fieldname": "Favourites B",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        },
+        {
+            "fieldname": "Favourites C",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        },
+        {
+            "fieldname": "Favourites D",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        },
+        {
+            "fieldname": "Favourites E",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        },
+        {
+            "fieldname": "Favourites F",
+            "fieldcontent": ["SubCont1", "SubCont2", "SubCont3", "SubCont4", "SubCont5", "SubCont6"]
+        }
+    ];
+    
+    $scope.toggleNav = function(selectedNav){
+        $scope.navSelector = selectedNav;
+    }
+});
+</script>

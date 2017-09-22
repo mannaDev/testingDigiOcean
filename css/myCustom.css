@@ -1,0 +1,62 @@
+.moveLeft{
+    float: left;
+}
+.moveRight{
+    float: right;
+}
+.clearLeft{
+    clear: left;
+}
+.clearRight{
+    clear: right;
+}
+.clearBoth{
+    clear: both;
+}
+
+.overflowHidden{
+    overflow: hidden;
+}
+
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.5em;
+}
+h4{
+    font-size: 1.25em;
+}
+h5{
+    font-size: 1em;
+}
+.boldFont{
+    font-weight: bold;
+}
+.italicFont{
+    font-style: italic;
+}
+.fontBreeSerif{
+    font-family: 'Bree Serif', serif;
+}
+.fontSedwig{
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+.fontCreteRound{
+    font-family: 'Crete Round', serif;
+}
+.fontCizel{
+    font-family: 'Cinzel', serif;
+}
+.fontPoiret{
+    font-family: 'Poiret One', cursive;
+}
+.fontLobster{
+    font-family: 'Lobster Two', cursive;
+}
+.fontGeo{
+    font-family: 'Geo', sans-serif;
+}

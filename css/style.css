@@ -1,0 +1,15 @@
+.arrow{
+    float: left;
+    background: url("../assets/arrow.png");
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+}
+#navToggle>ul>li{
+    border: 1px solid #223344;
+    margin: 10px 5px;
+}
+.transitionHeight{
+    transition: all linear 3s;
+}
